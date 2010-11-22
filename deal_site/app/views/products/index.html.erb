@@ -1,0 +1,14 @@
+<!-- flag_promotions/app/views/products/index.html.erb -->
+<% if params[:keywords] %>
+  <%= hook :search_results do %>
+    <% if @products.empty? %>
+      <%= t(:no_products_found) %>
+    <% else %>
+      <%= render "shared/products", :products => @products, :taxon => @taxon %>
+    <% end %>
+  <% end %>
+<% else %>
+  <%= hook :homepage_products do %>
+    <%= render "shared/products", :products => @products, :taxon => @taxon %>
+  <% end %>
+<% end %>
