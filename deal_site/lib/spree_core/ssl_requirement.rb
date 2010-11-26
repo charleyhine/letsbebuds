@@ -95,11 +95,11 @@ module SslRequirement
         redirect_to "https://secure.letsbebuds.com" + request.fullpath
         flash.keep
       elsif request.ssl? && !ssl_required?
-        if Rails.env.production?
-          redirect_to "http://letsbebuds.com" + request.fullpath
-        else
+        #if Rails.env.production?
+        #  redirect_to "http://letsbebuds.com" + request.fullpath
+        #else
           redirect_to "http://" + request.host + request.fullpath
-        end
+        #end
         flash.keep
       end
 
