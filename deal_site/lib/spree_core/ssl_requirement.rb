@@ -92,14 +92,10 @@ module SslRequirement
     def ensure_proper_protocol
       return true if ssl_allowed?
       if ssl_required? && !request.ssl? && ssl_supported?
-        redirect_to "https://secure.letsbebuds.com" + request.fullpath
+        redirect_to "https://secure." + request.host + request.fullpath
         flash.keep
       elsif request.ssl? && !ssl_required?
-        #if Rails.env.production?
-        #  redirect_to "http://letsbebuds.com" + request.fullpath
-        #else
-          redirect_to "http://" + request.host + request.fullpath
-        #end
+        redirect_to "http://" + request.host + request.fullpath
         flash.keep
       end
 
