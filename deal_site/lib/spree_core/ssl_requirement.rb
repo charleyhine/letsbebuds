@@ -95,12 +95,7 @@ module SslRequirement
         redirect_to "https://secure.letsbebuds.com" + request.fullpath
         flash.keep
       elsif request.ssl? && !ssl_required?
-        case request.subdomain
-            when 'www', 'secure'
-              redirect_to "http://letsbebuds.com" + request.fullpath
-            else
-              redirect_to "http://" + request.host + request.fullpath
-            end
+        redirect_to "http://" + request.host + request.fullpath
         flash.keep
       end
 
