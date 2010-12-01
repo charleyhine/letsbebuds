@@ -52,6 +52,29 @@
 
 # Modified version of the ssl_requirement plugin by DHH
 module SslRequirement
+  mattr_writer :ssl_host, :non_ssl_host, :disable_ssl_check
+
+  def self.ssl_host
+    determine_host(@@ssl_host) rescue nil
+  end
+
+  def self.non_ssl_host
+    determine_host(@@non_ssl_host) rescue nil
+  end
+
+  # mattr_reader would generate both ssl_host and self.ssl_host
+  def ssl_host
+    SslRequirement.ssl_host
+  end
+
+  def non_ssl_host
+    SslRequirement.non_ssl_host
+  end
+
+  def self.disable_ssl_check?
+    @@disable_ssl_check ||= false
+  end
+  
   def self.included(controller)
     controller.extend(ClassMethods)
     controller.before_filter(:ensure_proper_protocol)
@@ -92,12 +115,49 @@ module SslRequirement
     def ensure_proper_protocol
       return true if ssl_allowed?
       if ssl_required? && !request.ssl? && ssl_supported?
-        redirect_to "https://" + request.host + request.fullpath
+        redirect_to determine_redirect_url(request, true)
         flash.keep
+        return false
       elsif request.ssl? && !ssl_required?
-        redirect_to "http://" + request.host + request.fullpath
+        redirect_to determine_redirect_url(request, false)
         flash.keep
+        return false
       end
+    end
+    
+    def determine_redirect_url(request, ssl)
+      protocol = ssl ? "https" : "http"
+      "#{protocol}://#{determine_host_and_port(request, ssl)}#{request.fullpath}"
+    end
 
+    def determine_host_and_port(request, ssl)
+      request_host = request.host
+      request_port = request.port
+
+      if ssl
+        "#{(ssl_host || request_host)}#{determine_port_string(request_port)}"
+      else
+        "#{(non_ssl_host || request_host)}#{determine_port_string(request_port)}"
+      end
+    end
+
+    def self.determine_host(host)
+      if host.is_a?(Proc) || host.respond_to?(:call)
+        host.call
+      else
+        host
+      end
+    end
+
+    def determine_port_string(port)
+      unless port_normal?(port)
+        ":#{port}"
+      else
+        ""
+      end
+    end
+
+    def port_normal?(port)
+      NORMAL_PORTS.include?(port)
     end
 end
