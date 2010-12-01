@@ -1,5 +1,9 @@
 Letsbebuds::Application.configure do
   # Settings specified here will take precedence over those in config/environment.rb
+  
+  config.after_initialize do
+    SslRequirement.ssl_host = 'secure.letsbebuds.com'
+  end
 
   # The production environment is meant for finished, "live" apps.
   # Code is not reloaded between requests
