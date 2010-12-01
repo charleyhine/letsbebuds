@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
-
   before_filter :check_uri
+  protect_from_forgery
 
   def check_uri
     if /^www/.match(request.host)
