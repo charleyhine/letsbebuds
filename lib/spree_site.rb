@@ -1,7 +1,6 @@
 module SpreeSite
   class Engine < Rails::Engine
     def self.activate
-        state_machines.clear 
         Order.class_eval do 
               state_machines[:state] = StateMachine::Machine.new(Order, 
       :initial => 'cart', :use_transactions => false) do  # this is the line that changed 
