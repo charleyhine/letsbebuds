@@ -5,8 +5,8 @@ module SpreeSite
               state_machines[:state] = StateMachine::Machine.new(Order, 
       :initial => 'cart', :use_transactions => false) do  # this is the line that changed 
                 event :next do 
-                  transition :from => 'cart', :to => 'payment'
-                  #transition :from => 'address', :to => 'payment'
+                  transition :from => 'cart', :to => 'address'
+                  transition :from => 'address', :to => 'payment'
                   #transition :from => 'delivery', :to => 'payment'
                   #transition :from => 'payment', :to => 'confirm'
                   transition :from => 'payment', :to => 'complete'
