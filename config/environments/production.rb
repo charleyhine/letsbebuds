@@ -3,7 +3,7 @@ Letsbebuds::Application.configure do
   
   config.after_initialize do
     #SslRequirement.non_ssl_host = 'letsbebuds.com'
-    SslRequirement.ssl_host = 'secure.letsbebuds.com'
+    SslRequirement.ssl_host = 'https://secure.letsbebuds.com'
   end
 
   # The production environment is meant for finished, "live" apps.
