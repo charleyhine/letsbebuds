@@ -1,8 +1,8 @@
 Letsbebuds::Application.configure do
   # Settings specified here will take precedence over those in config/environment.rb
   config.after_initialize do
-    SslRequirement.non_ssl_host = 'localhost'
-    SslRequirement.ssl_host = 'secure.localhost'
+    SslRequirement.non_ssl_host = 'localhost:3000'
+    SslRequirement.ssl_host = 'secure.localhost:3000'
   end
 
   # In the development environment your application's code is reloaded on
