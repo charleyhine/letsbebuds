@@ -5,6 +5,7 @@ gem 'spree', '0.30.1'
 gem 'taps', '0.3.14'
 gem 'aws-s3'
 gem 'bartt-ssl_requirement'
+gem 'devise', :git => 'git://github.com/plataformatec/devise.git' 
 
 #gem 'hoptoad_notifier'
 #gem 'heroku'
