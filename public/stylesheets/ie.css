@@ -1,0 +1,33 @@
+* html body{width:expression(document.documentElement.clientWidth < 960 ? "9px" : "auto");}
+* html .logo {
+	background:-9999px -9999px;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='images/logo.png', sizingmethod='crop');
+}
+* html .form-alert .btn {
+	background:-9999px -9999px;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='images/btn-form-alert.png', sizingmethod='crop');
+}
+* html #main {
+	background:-9999px -9999px;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='images/bg-main.png', sizingmethod='scale');
+}
+* html .coupon {
+	background:-9999px -9999px;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='images/bg-coupon.png', sizingmethod='crop');
+}
+* html .coupon .arrow {
+	background:-9999px -9999px;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='images/bg-arrow.png', sizingmethod='crop');
+}
+* html .about {
+	background:-9999px -9999px;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='images/ico-about.png', sizingmethod='crop');
+}
+* html .phone {
+	background:-9999px -9999px;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='images/ico-phone.png', sizingmethod='crop');
+}
+* html .other {
+	background:-9999px -9999px;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='images/ico-other.png', sizingmethod='crop');
+}

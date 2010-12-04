@@ -1,0 +1,390 @@
+html, body{
+	height: 100%;
+}
+body {
+	margin: 0;
+	color: #fff;
+	font: 300 12px "museo-1","museo-2", serif;
+	background: #ccf url(../images/bg-body.gif) repeat-x;
+	min-width: 960px;
+}
+img { border-style: none; }
+a {
+	text-decoration: underline;
+	color: #333366;
+}
+a:hover { text-decoration: none; }
+input, textarea, select {
+	font: 100% Arial, Helvetica, sans-serif;
+	vertical-align: middle;
+	color: #000;
+}
+form, fieldset {
+	margin: 0;
+	padding: 0;
+	border-style: none;
+}
+#wrapper {
+	overflow: hidden;
+	width: 100%;
+	min-height: 100%;
+	background: url(../images/bg-wrapper.gif) no-repeat 50% 0;
+}
+* html #wrapper {
+	height: 100%;
+	overflow: visible;
+}
+.wrapper-content {
+	width: 960px;
+	margin: 0 auto;
+	padding: 90px 0 0;
+	position: relative;
+	z-index: 1;
+}
+#header {
+	height: 90px;
+	left: 50%;
+	margin-left: -220px;
+	position: absolute;
+	top: 0;
+	width: 700px;
+	z-index: 2;
+}
+.logo-holder {
+	left: 19px;
+	position: absolute;
+	top: 17px;
+	z-index: 5;
+}
+.logo {
+	background: url(../images/logo.png) no-repeat;
+	width: 167px;
+	height: 71px;
+	overflow: hidden;
+	text-indent: -9999px;
+	margin: 0;
+}
+.logo a {
+	display: block;
+	height: 100%;
+	position: relative;
+}
+.form-alert {
+	float: right;
+	padding: 47px 1px 0 0;
+	width: 381px;
+}
+.form-alert .text {
+	background: url("../images/bg-form-alert.gif") no-repeat;
+	float: left;
+	margin-right: 17px;
+	width: 284px;
+	display: inline;
+}
+.form-alert .text input {
+	background: transparent;
+	border: 0 none;
+	font-size: 16px;
+	height: 17px;
+	padding: 7px 10px 10px;
+	width: 264px;
+}
+.form-alert .btn {
+	background: url("../images/btn-form-alert.png") no-repeat;
+	border: 0 none;
+	cursor: pointer;
+	float: left;
+	height: 34px;
+	margin: 0;
+	padding: 0;
+	width: 64px;
+}
+.socials {
+	overflow: hidden;
+	height: 1%;
+	position: relative;
+	margin-top: -19px;
+}
+.socials ul {
+	float: right;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.socials ul li {
+	float: left;
+	padding: 0 0 0 8px;
+}
+.socials a {
+	overflow: hidden;
+	text-indent: -9999px;
+	display: block;
+}
+.socials .mail {
+	background: url("../images/ico-mail.gif") no-repeat;
+	width: 24px;
+	height: 26px;
+	margin:3px 0 0;
+}
+.socials .twitter {
+	background: url("../images/ico-twitter.gif") no-repeat;
+	width: 24px;
+	height: 24px;
+}
+.socials .facebook {
+	background: url("../images/ico-facebook.gif") no-repeat;
+	width: 48px;
+	height: 20px;
+}
+#main {
+	overflow: hidden;
+	height: 1%;
+	padding: 20px 20px 0;
+	background: url(../images/bg-main.png);
+}
+.main-content {
+	overflow: hidden;
+	height: 1%;
+	padding: 26px 57px 0 46px;
+}
+.coupon {
+	width: 920px;
+	height: 548px;
+	background: url(../images/bg-coupon.png) no-repeat;
+}
+.coupon-holder {
+	height: 353px;
+	position: relative;
+	overflow: hidden;
+}
+.coupon-text {
+	float: left;
+	padding: 42px 0 0 47px;
+	width: 475px;
+}
+.coupon-text p {
+	color: #000;
+	font: 700 27px/34px "museo-1","museo-2", serif;
+	margin: 0;
+	letter-spacing: 1px;
+	word-spacing: -2px;
+}
+.coupon-img {
+	float: right;
+	width: 340px;
+	padding: 50px 50px 0 0;
+}
+.coupon .row {
+	overflow: hidden;
+	padding: 0 0 0 46px;
+}
+* html .coupon .row {
+	overflow: visible;
+	height: 1%;
+}
+.coupon .btn-buy-now {
+	background: url("../images/btn-buy-now.gif") no-repeat;
+	float: left;
+	height: 82px;
+	margin: 15px 26px 0 0;
+	width: 184px;
+	display: inline;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+.coupon .arrow {
+	background: url("../images/bg-arrow.png") no-repeat;
+	float: left;
+	height: 94px;
+	padding: 21px 0 0 92px;
+	width: 521px;
+}
+.coupon .discount {
+	color: #000;
+	float: left;
+	padding-right: 80px;
+	position: relative;
+	font: 700 30px/32px "museo-1","museo-2";
+}
+.coupon .bought {
+	background: url("../images/bg-bought.gif") no-repeat 0 3px;
+	color: #000;
+	float: left;
+	font: 500 18px/24px "museo-1","museo-2", serif;
+	margin-top: 24px;
+	white-space: nowrap;
+	padding: 0 21px 0 33px;
+	position: relative;
+}
+.coupon .time {
+	background: url("../images/bg-time.gif") no-repeat;
+	color: #000;
+	float: left;
+	white-space: nowrap;
+	font-size: 18px;
+	line-height: 24px;
+	margin-top: 21px;
+	position: relative;
+	padding: 3px 0 0 33px;
+}
+.heading {
+	overflow: hidden;
+	height: 1%;
+	padding-left: 42px;
+}
+.heading h2 {
+	font: 700 24px/32px "museo-1","museo-2", serif;
+	letter-spacing: 1px;
+	margin: 0 0 4px;
+	word-spacing: -2px;
+}
+#content .heading h2 { margin: 0; }
+.about { background: url(../images/ico-about.png) no-repeat; }
+.phone { background: url(../images/ico-phone.png) no-repeat; }
+.other { background: url(../images/ico-other.png) no-repeat; }
+#content {
+	float: left;
+	width: 433px;
+	position: relative;
+}
+#content p {
+	line-height: 14px;
+	margin: 0;
+}
+.content-text {
+	overflow: hidden;
+	height: 1%;
+	padding: 11px 0 59px 45px;
+}
+.address {
+	height: 1%;
+	overflow: hidden;
+	padding-bottom: 13px;
+}
+.address address {
+	font-style: normal;
+	line-height: 15px;
+}
+#content .address p { margin: 0; }
+.list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.list li {
+	height: 1%;
+	overflow: hidden;
+	padding-bottom: 14px;
+	vertical-align: top;
+}
+.form-phone {
+	margin: -3px 0 0 -3px;
+	position: relative;
+}
+.form-phone .row {
+	overflow: hidden;
+	width: 286px;
+	height: 36px;
+	margin-top: 5px;
+	background: url(../images/bg-form-phone.gif) no-repeat;
+}
+.form-phone .text {
+	background: transparent;
+	border: 0 none;
+	font-size: 16px;
+	height: 18px;
+	padding: 9px 11px 10px;
+	width: 264px;
+}
+.form-phone .btn-row {
+	overflow: hidden;
+	height: 1%;
+	padding: 13px 0 0 2px;
+}
+.form-phone .btn {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	width: 60px;
+	height: 30px;
+	float: left;
+	cursor: pointer;
+	background: url(../images/btn-form-phone.gif) no-repeat;
+}
+#sidebar {
+	float: right;
+	width: 374px;
+	position: relative;
+}
+.sidebar-text {
+	height: 1%;
+	overflow: hidden;
+	padding: 3px 0 0 39px;
+}
+.list-other {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.list-other li {
+	height: 1%;
+	overflow: hidden;
+	padding-bottom: 17px;
+	vertical-align: top;
+}
+.list-other .info {
+	float: left;
+	width: 98px;
+	padding-right: 23px;
+	text-align: right;
+}
+.list-other .info strong {
+	display: block;
+	font: 700 30px/34px "museo-1","museo-2", serif;
+}
+.list-other .info span {
+	display: block;
+	font: 700 18px/23px "museo-1","museo-2", serif;
+}
+.list-other .text {
+	overflow: hidden;
+	height: 1%;
+}
+.list-other .text h3 {
+	margin: 0;
+	font: 700 30px/34px "museo-1","museo-2", serif;
+}
+.list-other .text p {
+	font: 700 18px/23px "museo-1","museo-2", serif;
+	margin: 0;
+}
+#footer {
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 5px 3px 120px 0;
+	width: 918px;
+}
+#footer p {
+	float: left;
+	margin: 0;
+	font: 500 18px/24px "museo-1","museo-2", serif;
+}
+#footer p span { font: 700 18px/24px "museo-1","museo-2", serif; }
+#footer ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: right;
+}
+#footer ul li {
+	float: left;
+	padding: 0 0 0 15px;
+}
+#footer ul a {
+	font: 700 18px/24px "museo-1","museo-2", serif;
+	color: #fff;
+	text-decoration: none;
+}
+#footer ul a:hover { text-decoration: underline; }
