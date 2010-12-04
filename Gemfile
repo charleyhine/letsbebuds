@@ -36,4 +36,4 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
-#gem "deal_site", :require => "deal_site", :path => "deal_site"
+gem "deal_site", :require => "deal_site", :path => "deal_site"
