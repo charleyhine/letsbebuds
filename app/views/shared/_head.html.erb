@@ -7,8 +7,5 @@
   <%= javascript_include_tag ['localization/messages_', I18n.locale.to_s[0..1], '.js'].join %>
 <% end %>
 
-<script type="text/javascript" src="http://use.typekit.com/kyq5chh.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
 <%= yield :head %>
 <%= raw meta_data_tags %>
