@@ -1,10 +1,7 @@
 # Be sure to restart your server when you modify this file.
 
-if RAILS_ENV = 'production'
-  Letsbebuds::Application.config.session_store :cookie_store, :key => '_letsbebuds_session', :domain => "letsbebuds.com"
-else
-  Letsbebuds::Application.config.session_store :cookie_store, :key => '_letsbebuds_session' 
-end  
+Letsbebuds::Application.config.session_store :cookie_store, :key => '_letsbebuds_session' 
+#Letsbebuds::Application.config.session_store :cookie_store, :key => '_letsbebuds_session', :domain => "letsbebuds.com"
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information

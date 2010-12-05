@@ -223,7 +223,8 @@ form, fieldset {
 	color: #000;
 	float: left;
 	white-space: nowrap;
-	font-size: 18px;
+	font: 500 18px/24px "museo-1","museo-2", serif;
+	/* font-size: 18px; */ 
 	line-height: 24px;
 	margin-top: 21px;
 	position: relative;
@@ -384,7 +385,7 @@ form, fieldset {
 }
 #footer ul a {
 	font: 700 18px/24px "museo-1","museo-2", serif;
-	color: #fff;
+	/*color: #fff;*/
 	text-decoration: none;
 }
 #footer ul a:hover { text-decoration: underline; }
