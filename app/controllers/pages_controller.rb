@@ -5,4 +5,12 @@ class PagesController < ActionController::Base
     
     render :layout => 'layouts/letsbebuds'
   end
+  
+  def privacy
+    render :layout => 'layouts/letsbebuds'
+  end
+  
+  def terms
+    render :layout => 'layouts/letsbebuds'
+  end
 end

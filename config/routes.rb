@@ -3,6 +3,9 @@ Letsbebuds::Application.routes.draw do
   # first created -> highest priority.
 
   match 'products' => "pages#home"
+  
+  match 'privacy' => "pages#privacy"
+  match 'terms' => "pages#terms"
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
