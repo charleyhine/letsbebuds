@@ -4,7 +4,7 @@ div.inner input[type=text], div.inner select { width: 80%; }
 </style>
 <fieldset id='billing'>
   <%= form.fields_for :bill_address do |bill_form| %>
-    <legend>Billing Address needed but not be saved (absolutely anonymous)</legend>
+    <legend>Billing Address (required for credit card validation)</legend>
 	
     <div class="inner">
       <p class="field">&nbsp;</p>
@@ -67,7 +67,7 @@ div.inner input[type=text], div.inner select { width: 80%; }
       </p>
       <p id="bphone" class="field">
         <%= bill_form.label :phone, t(:phone) %>
-        <%= bill_form.text_field :phone, :class => 'required' %><span class="req">*</span>
+        <%= bill_form.text_field :phone %><span>Your phone number not required but allows us to provide free phone support</span>
           </p>
           <% if Spree::Config[:alternative_billing_phone] %>
             <p id="baltphone">

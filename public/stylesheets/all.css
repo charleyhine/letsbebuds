@@ -164,7 +164,8 @@ form, fieldset {
 }
 .coupon-text p {
 	color: #000;
-	font: 700 27px/34px "museo-1","museo-2", serif;
+	font: 700 27px/34px arial, "museo-1","museo-2", serif;
+	font-weight: bold;
 	margin: 0;
 	letter-spacing: 1px;
 	word-spacing: -2px;
@@ -370,9 +371,9 @@ form, fieldset {
 #footer p {
 	float: left;
 	margin: 0;
-	font: 500 18px/24px "museo-1","museo-2", serif;
+	font: 500 18px/24px "museo-1","museo-2", arial, serif;
 }
-#footer p span { font: 700 18px/24px "museo-1","museo-2", serif; }
+#footer p span { font: 700 18px/24px "museo-1","museo-2", arial, serif; }
 #footer ul {
 	margin: 0;
 	padding: 0;
@@ -384,8 +385,8 @@ form, fieldset {
 	padding: 0 0 0 15px;
 }
 #footer ul a {
-	font: 700 18px/24px "museo-1","museo-2", serif;
-	/*color: #fff;*/
+	font: 700 18px/24px "museo-1","museo-2", arial, serif;
+	color: #fff;
 	text-decoration: none;
 }
 #footer ul a:hover { text-decoration: underline; }

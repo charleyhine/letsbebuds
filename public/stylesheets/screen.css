@@ -294,8 +294,8 @@ body.two-col #wrapper { background-image: url(../images/wrapper-back-2.png); }
   border-right: 1px solid #eeeeee;
 }
 .logo-holder {
-	left: 140px;
-	position: absolute;
+	left: 0px;
+	position: relative;
 	top: 0px;
 	z-index: 5;
 }
@@ -328,7 +328,7 @@ body.two-col #content {
   position: relative;
   color: #2e6ab1;
   clear: both;
-  padding: 16px 0 0 0;
+  padding: 16px 0px 0 0;
 }
 #header a { color: #2e6ab1; }
 #header a:hover { color: #eeeeee; }
@@ -345,9 +345,10 @@ body.two-col #content {
 #footer p {
 	float: left;
 	margin: 0;
-	font: 500 18px/24px "museo-1","museo-2", serif;
+	font: 500 18px/24px "museo-1","museo-2", arial, serif;
+	color: #333366;
 }
-#footer p span { font: 700 18px/24px "museo-1","museo-2", serif; }
+#footer p span { font: 700 18px/24px "museo-1","museo-2", arial, serif; }
 #footer ul {
 	margin: 0;
 	padding: 0;
@@ -359,8 +360,8 @@ body.two-col #content {
 	padding: 0 0 0 15px;
 }
 #footer ul a {
-	font: 700 18px/24px "museo-1","museo-2", serif;
-	/*color: #fff;*/
+	font: 700 18px/24px "museo-1","museo-2", arial, serif;
+	color: #333366;
 	text-decoration: none;
 }
 #footer ul a:hover { text-decoration: underline; }
