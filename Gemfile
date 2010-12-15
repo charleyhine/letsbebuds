@@ -6,6 +6,7 @@ gem 'taps', '0.3.14'
 gem 'aws-s3'
 gem 'bartt-ssl_requirement'
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git' 
+gem 'uuidtools'
 
 #gem 'hoptoad_notifier'
 #gem 'heroku'

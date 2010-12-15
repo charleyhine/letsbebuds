@@ -1,9 +1,12 @@
 Letsbebuds::Application.routes.draw do
+  resources :deals
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   match 'products' => "pages#home"
   
+  match 'contact' => "pages#contact"
   match 'privacy' => "pages#privacy"
   match 'terms' => "pages#terms"
   # Sample of regular route:

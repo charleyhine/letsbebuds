@@ -1,0 +1,29 @@
+<h1>Listing deals</h1>
+
+<table>
+  <tr>
+    <th>Redemption code</th>
+    <th>Redeemed</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @deals.each do |deal| %>
+  <tr>
+    <td><%= deal.redemption_code %></td>
+
+	<td>
+	  <%= form_for(deal) do |f| %>
+	  <div class="field">
+	    <%= f.check_box :redeemed %>
+	  </div>
+	  <div class="actions">
+	    <%= f.submit %>
+	  </div>
+	<% end %>
+	</td>
+  
+  </tr>
+<% end %>
+</table>

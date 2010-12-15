@@ -132,8 +132,8 @@ form, fieldset {
 	height: 24px;
 }
 .socials .facebook {
-	background: url("../images/ico-facebook.gif") no-repeat;
-	width: 48px;
+	/* background: url("../images/ico-facebook.gif") no-repeat; */
+	width: 80px;
 	height: 20px;
 }
 #main {

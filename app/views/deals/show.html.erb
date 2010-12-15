@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Billing Name:</b>
+  <%= @deal.order.bill_address.firstname + ' ' + @deal.order.bill_address.lastname %>
+</p>
+
+<p>
+  <b>Redemption code:</b>
+  <%= @deal.redemption_code %>
+</p>
+
+<p>
+  <b>Redeemed:</b>
+  <%= @deal.redeemed %>
+</p>
+
+
+<%= link_to 'Back', deals_path %>

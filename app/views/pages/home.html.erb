@@ -1,7 +1,7 @@
 <div class="coupon">
 	<div class="coupon-holder">
 		<div class="coupon-text">
-			<p>$25 off steaks at Denver Steak Club on 20th in Uptown!</p>
+			<p><%= @featured_product.name %></p>
 		</div>
 		<div class="coupon-img">
 			<div class="img-holder"><a href="/products/<%= @featured_product.permalink %>"><img src="http://s3.amazonaws.com/letsbebuds/assets/products/1030/feature/food_steak.jpg?1291517729" alt="image description" width="340" height="300" /></a></div>
@@ -10,17 +10,18 @@
 	<div class="row">
 		<a href="/products/<%= @featured_product.permalink %>" class="btn-buy-now">buy now</a>
 		<div class="arrow">
-			<span class="discount">save<br/>50%</span>
-			<span class="bought">1265 bought</span>
-			<span class="time">18 days 45 minutes</span>
+			<span class="discount">save<br/>73%</span>
+			<span class="bought">0 bought</span>
+			<span class="time">18 days remaining</span>
 		</div>
 	</div>
 </div>
 <div class="socials">
 	<ul>
-		<li><a href="#" class="mail">mail</a></li>
-		<li><a href="#" class="twitter">twitter</a></li>
-		<li><a href="#" class="facebook">facebook</a></li>
+		<!--<li><a href="#" class="mail">mail</a></li>-->
+		<li><a href="http://twitter.com/letsbebuds" class="twitter">twitter</a></li>
+		<li class="facebook"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fletsbebuds.com&amp;layout=button_count&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe></li>
+		<!--<li><a href="http://www.facebook.com/pages/Lets-Be-Buds/167856976566409" class="facebook">facebook</a></li>-->
 	</ul>
 </div>
 <div class="main-content">
@@ -29,21 +30,26 @@
 			<h2>about the deal</h2>
 		</div>
 		<div class="content-text">
-			<p>Preferred Organic Therapy Header style as 700</p>
+			<p>Pete's Steak House</p>
 			<div class="address">
 				<address>
-					1234 address lane style as 300<br/>
-					Denver, CO 80205
+					514 E Colfax Ave
+					<br/>
+					Denver, CO 80203
 				</address>
-				<p><a href="#">This is a link to the store website</a></p>
+				<p><a href="http://www.yelp.com/biz/petes-steak-house-denver">Help from Yelp!</a></p>
 			</div>
 			<ul class="list">
-				<li>* More terms here just like this More terms here just like this More terms here just like this More terms here just like this</li>
-				<li>* More terms here just like this More terms here just like this More terms here just like this More terms here just like this</li>
-				<li>* More terms here just like this More terms here just like this More terms here just like this More terms here just like this</li>
-				<li>* More terms here just like this More terms here just like this More terms here just like this More terms here just like this</li>
+				<li>* Limit 1 per customer</li>
+				<li>Valid only at the Denver Location</li>
+				<li>Promotional value expires December 12, 2011 (1 year from purchase)</li>
+				<li>Limit 1 per customer</li>
+				<li>Not Valid on Holidays and Special Events</li>
+				<li>Not Valid for Alcohol, Tax or Tip</li>
+				<li>Dine-in only</li>
 			</ul>
 		</div>
+		<!-- 
 		<div class="heading phone">
 			<h2>deals to your phone</h2>
 		</div>
@@ -62,6 +68,7 @@
 				</fieldset>
 			</form>
 		</div>
+		-->
 	</div>
 	<div id="sidebar">
 		<div class="heading other">
@@ -71,42 +78,22 @@
 			<ul class="list-other">
 				<li>
 					<div class="info">
-						<strong>15%</strong>
+						<strong>60%</strong>
 						<span>OFF</span>
 					</div>
 					<div class="text">
-						<h3><a href="#">Big Link 700</a></h3>
-						<p>body at 700 but smaller pt. body at 700 but smaller pt. style please</p>
+						<h3><a href="/products/<%= @sub1_product.permalink %>">Chicago Hair</a></h3>
+						<p><%= truncate(@sub1_product.description, :length => 60) %></p>
 					</div>
 				</li>
 				<li>
 					<div class="info">
-						<strong>15%</strong>
+						<strong>90%</strong>
 						<span>OFF</span>
 					</div>
 					<div class="text">
-						<h3>Big Text 700</h3>
-						<p>body at 700 but smaller pt. body at 700 but smaller pt. style please</p>
-					</div>
-				</li>
-				<li>
-					<div class="info">
-						<strong>15%</strong>
-						<span>OFF</span>
-					</div>
-					<div class="text">
-						<h3>1 Quarter</h3>
-						<p>body at 700 but smaller pt. body at 700 but smaller pt. style please</p>
-					</div>
-				</li>
-				<li>
-					<div class="info">
-						<strong>15%</strong>
-						<span>OFF</span>
-					</div>
-					<div class="text">
-						<h3>1 Quarter</h3>
-						<p>body at 700 but smaller pt. body at 700 but smaller pt. style please</p>
+						<h3><a href="/products/<%= @sub2_product.permalink %>">Grand Salon</a></h3>
+						<p><%= truncate(@sub2_product.description, :length => 60) %></p>
 					</div>
 				</li>
 			</ul>

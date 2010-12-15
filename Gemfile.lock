@@ -166,6 +166,7 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.23)
+    uuidtools (2.1.1)
     warden (1.0.2)
       rack (>= 1.0.0)
     will_paginate (3.0.pre2)
@@ -184,3 +185,4 @@ DEPENDENCIES
   spree (= 0.30.1)
   sqlite3-ruby
   taps (= 0.3.14)
+  uuidtools
