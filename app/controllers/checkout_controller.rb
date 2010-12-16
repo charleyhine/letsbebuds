@@ -86,6 +86,7 @@ class CheckoutController < Spree::BaseController
     @order.line_items.each do |line|
       
       line.quantity.to_i.times do
+        #debugger
         @deal = Deal.create(
         :redemption_code => @order.bill_address.lastname.upcase + "-" + SecureRandom.hex(10), 
         :order_id => @order.id, 
