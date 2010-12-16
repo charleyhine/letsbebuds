@@ -1,11 +1,11 @@
 GIT
   remote: git://github.com/plataformatec/devise.git
-  revision: b50fd1a
+  revision: a23a52b
   specs:
     devise (1.2.rc)
       bcrypt-ruby (~> 2.1.2)
-      orm_adapter (~> 0.0.2)
-      warden (~> 1.0.2)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.0.3)
 
 PATH
   remote: deal_site
@@ -30,7 +30,7 @@ GEM
       rack-mount (~> 0.6.13)
       rack-test (~> 0.5.6)
       tzinfo (~> 0.3.23)
-    activemerchant (1.9.1)
+    activemerchant (1.9.2)
       activesupport (>= 2.3.2)
       braintree (>= 2.0.0)
       builder (>= 2.0.0)
@@ -61,7 +61,7 @@ GEM
       builder
     builder (2.1.2)
     cancan (1.4.1)
-    columnize (0.3.1)
+    columnize (0.3.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     faker (0.3.1)
@@ -72,14 +72,14 @@ GEM
       thor (~> 0.14.4)
     json_pure (1.4.6)
     linecache (0.43)
-    mail (2.2.11)
+    mail (2.2.12)
       activesupport (>= 2.3.6)
-      i18n (~> 0.5.0)
+      i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
     orm_adapter (0.0.3)
-    paperclip (2.3.6)
+    paperclip (2.3.8)
       activerecord
       activesupport
     polyglot (0.3.1)
@@ -105,15 +105,15 @@ GEM
     rd_awesome_nested_set (1.4.4)
       activerecord (>= 1.1)
     rd_resource_controller (1.0.0)
-    rd_searchlogic (3.0.0.rc4)
+    rd_searchlogic (3.0.0)
       activerecord (>= 3.0.0)
     rd_unobtrusive_date_picker (0.1.0)
     rest-client (1.6.1)
       mime-types (>= 1.16)
-    ruby-debug (0.10.3)
+    ruby-debug (0.10.4)
       columnize (>= 0.1)
-      ruby-debug-base (~> 0.10.3.0)
-    ruby-debug-base (0.10.3)
+      ruby-debug-base (~> 0.10.4.0)
+    ruby-debug-base (0.10.4)
       linecache (>= 0.3)
     sequel (3.17.0)
     sinatra (1.0)
@@ -167,7 +167,7 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (0.3.23)
     uuidtools (2.1.1)
-    warden (1.0.2)
+    warden (1.0.3)
       rack (>= 1.0.0)
     will_paginate (3.0.pre2)
     xml-simple (1.0.12)
