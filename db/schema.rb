@@ -123,28 +123,28 @@ ActiveRecord::Schema.define(:version => 20101211230305) do
   end
 
   create_table "customers", :force => true do |t|
-    t.string   "name"
-    t.string   "email_address"
-    t.string   "phone_number"
-    t.string   "url"
-    t.string   "address"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip_code"
-    t.string   "country"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.string    "email_address"
+    t.string    "phone_number"
+    t.string    "url"
+    t.string    "address"
+    t.string    "city"
+    t.string    "state"
+    t.string    "zip_code"
+    t.string    "country"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "deals", :force => true do |t|
-    t.string   "redemption_code"
-    t.integer  "user_id"
-    t.integer  "order_id"
-    t.integer  "product_id"
-    t.integer  "customer_id"
-    t.boolean  "redeemed",        :default => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "redemption_code"
+    t.integer   "user_id"
+    t.integer   "order_id"
+    t.integer   "product_id"
+    t.integer   "customer_id"
+    t.boolean   "redeemed",        :default => false
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "gateways", :force => true do |t|
@@ -304,6 +304,8 @@ ActiveRecord::Schema.define(:version => 20101211230305) do
     t.timestamp "updated_at"
   end
 
+  add_index "preferences", ["owner_id", "owner_type", "name", "group_id", "group_type"], :name => "ix_prefs_on_owner_attr_pref", :unique => true
+
   create_table "product_groups", :force => true do |t|
     t.string "name"
     t.string "permalink"
@@ -346,19 +348,19 @@ ActiveRecord::Schema.define(:version => 20101211230305) do
   add_index "product_scopes", ["product_group_id"], :name => "index_product_scopes_on_product_group_id"
 
   create_table "products", :force => true do |t|
-    t.string   "name",                 :default => "", :null => false
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "permalink"
-    t.datetime "available_on"
-    t.integer  "tax_category_id"
-    t.integer  "shipping_category_id"
-    t.datetime "deleted_at"
-    t.string   "meta_description"
-    t.string   "meta_keywords"
-    t.integer  "count_on_hand",        :default => 0,  :null => false
-    t.integer  "customer_id"
+    t.string    "name",                 :default => "", :null => false
+    t.text      "description"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "permalink"
+    t.timestamp "available_on"
+    t.integer   "tax_category_id"
+    t.integer   "shipping_category_id"
+    t.timestamp "deleted_at"
+    t.string    "meta_description"
+    t.string    "meta_keywords"
+    t.integer   "count_on_hand",        :default => 0,  :null => false
+    t.integer   "customer_id"
   end
 
   add_index "products", ["available_on"], :name => "index_products_on_available_on"
@@ -565,28 +567,28 @@ ActiveRecord::Schema.define(:version => 20101211230305) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email"
-    t.string   "crypted_password",          :limit => 128
-    t.string   "salt",                      :limit => 128
-    t.string   "remember_token"
-    t.string   "remember_token_expires_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "persistence_token"
-    t.string   "single_access_token"
-    t.string   "perishable_token"
-    t.integer  "login_count",                              :default => 0, :null => false
-    t.integer  "failed_login_count",                       :default => 0, :null => false
-    t.datetime "last_request_at"
-    t.datetime "current_login_at"
-    t.datetime "last_login_at"
-    t.string   "current_login_ip"
-    t.string   "last_login_ip"
-    t.string   "login"
-    t.integer  "ship_address_id"
-    t.integer  "bill_address_id"
-    t.string   "openid_identifier"
-    t.string   "api_key",                   :limit => 40
+    t.string    "email"
+    t.string    "crypted_password",          :limit => 128
+    t.string    "salt",                      :limit => 128
+    t.string    "remember_token"
+    t.string    "remember_token_expires_at"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "persistence_token"
+    t.string    "single_access_token"
+    t.string    "perishable_token"
+    t.integer   "login_count",                              :default => 0, :null => false
+    t.integer   "failed_login_count",                       :default => 0, :null => false
+    t.timestamp "last_request_at"
+    t.timestamp "current_login_at"
+    t.timestamp "last_login_at"
+    t.string    "current_login_ip"
+    t.string    "last_login_ip"
+    t.string    "login"
+    t.integer   "ship_address_id"
+    t.integer   "bill_address_id"
+    t.string    "openid_identifier"
+    t.string    "api_key",                   :limit => 40
   end
 
   add_index "users", ["openid_identifier"], :name => "index_users_on_openid_identifier"
