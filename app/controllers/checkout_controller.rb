@@ -78,6 +78,10 @@ class CheckoutController < Spree::BaseController
 
   def after_complete 
     
+    logger.debug "=========================="
+    logger.debug "=========================="
+    logger.debug "Creating deal(s) for order"
+    
     # Loop through order line items, then quantity of each -> create Deal
     @order.line_items.each do |line|
       
@@ -89,7 +93,7 @@ class CheckoutController < Spree::BaseController
         :product_id => line.variant.product.id, 
         :customer_id => line.variant.product.customer.id)
         
-        OrderMailer.confirm_email(@order, @deal).deliver
+        DealMailer.deal_email(@order, @deal).deliver
       end
     end
     

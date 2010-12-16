@@ -1,0 +1,20 @@
+Dear Customer,
+
+Your deal redemption code is: <%= @deal.redemption_code %>
+
+To redeem, simply print or bring your redemption code to the location below:
+
+
+<%= @deal.product.customer.name %>
+<%= @deal.product.customer.address %>
+<%= @deal.product.customer.city %>, <%= @deal.product.customer.state %> <%= @deal.product.customer.zip_code %>
+
+
+Fine print:
+
+<%= @deal.product.name %>
+<%= @deal.product.description %>
+
+Order Total: <%= number_to_currency @order.total %>
+
+Need help? No problem. Visit http://letsbebuds/contact or email letsbebudscom@gmail.com
