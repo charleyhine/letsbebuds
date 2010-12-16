@@ -89,7 +89,7 @@ class CheckoutController < Spree::BaseController
         :product_id => line.variant.product.id, 
         :customer_id => line.variant.product.customer.id)
         
-        OrderMailer.confirm_email(@order, @deal).deliver
+        OrderMailer.confirm_email(@order, @deal, false).deliver
       end
     end
     

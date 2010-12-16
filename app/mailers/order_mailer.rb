@@ -1,7 +1,7 @@
 class OrderMailer < ActionMailer::Base
   helper "spree/base"
 
-  def confirm_email(order, deal, resend=false)
+  def confirm_email(order, deal, resend)
     @order = order
     @deal = deal
     subject = (resend ? "[RESEND] " : "")
