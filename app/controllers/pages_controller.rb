@@ -11,14 +11,17 @@ class PagesController < ActionController::Base
   end
   
   def privacy
+    @alert_email = AlertEmail.new
     render :layout => 'layouts/letsbebuds'
   end
   
   def terms
+    @alert_email = AlertEmail.new
     render :layout => 'layouts/letsbebuds'
   end
   
   def contact
+    @alert_email = AlertEmail.new
     render :layout => 'layouts/letsbebuds'
   end
 end

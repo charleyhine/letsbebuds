@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Your deal redemption code is: <%= @deal.redemption_code %></h1>
+	<p>
+		<%= @deal.product.name %>
+	</p>
+  	
+	Print the email and redeem at:
+	<p>
+      	<%= @deal.product.customer.name %>
+		<%= @deal.product.customer.address %>
+		<%= @deal.product.customer.city %>, <%= @deal.product.customer.state %> <%= @deal.product.customer.zip_code %><br/>
+    </p>
+ 
+      Fine print:
+
+      	<p>
+	      	<%= @deal.product.name %>
+			<%= @deal.product.description %>
+	    </p>
+
+    <p>Need help? No problem. Visit http://letsbebuds.com/contact or email letsbebudscom@gmail.com</p>
+  </body>
+</html>
