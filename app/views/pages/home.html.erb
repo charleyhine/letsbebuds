@@ -1,18 +1,18 @@
 <div class="coupon">
 	<div class="coupon-holder">
 		<div class="coupon-text">
-			<p><%= @featured_product.name %></p>
+			<p>FEATURED DEAL <br /><br /> <%= @featured_product.name %> <br /><br /> Choose From... Flow, Golden Goat, Maui Blue, White Widow + More</p>
 		</div>
 		<div class="coupon-img">
-			<div class="img-holder"><a href="/products/<%= @featured_product.permalink %>"><img src="http://s3.amazonaws.com/letsbebuds/assets/products/1030/feature/food_steak.jpg?1291517729" alt="image description" width="340" height="300" /></a></div>
+			<div class="img-holder"><a href="/products/<%= @featured_product.permalink %>"><img src="images/img1.jpg" alt="image description" width="340" height="300" /></a></div>
 		</div>
 	</div>
 	<div class="row">
 		<a href="/products/<%= @featured_product.permalink %>" class="btn-buy-now">buy now</a>
 		<div class="arrow">
-			<span class="discount">save<br/>73%</span>
-			<span class="bought">0 bought</span>
-			<span class="time">18 days remaining</span>
+			<span class="discount">save<br/>35%</span>
+			<span class="bought"><%= @featured_product.on_hand %> left</span>
+			<span class="time">15 days remaining</span>
 		</div>
 	</div>
 </div>
@@ -30,23 +30,21 @@
 			<h2>about the deal</h2>
 		</div>
 		<div class="content-text">
-			<p>Pete's Steak House</p>
+			<p>* $<%= @featured_product.price.to_i %> for coupon redeemable at</p>
+			<br />
+			<p>Preferred Organic Therapy</p>
 			<div class="address">
 				<address>
-					514 E Colfax Ave
+					<%= @featured_product.customer.address %>
 					<br/>
-					Denver, CO 80203
+					<%= @featured_product.customer.city %>, <%= @featured_product.customer.state %> <%= @featured_product.customer.zip_code %> (<a href='http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=1569+S.+Colorado+Blvd.+Denver,+Co+80222&sll=39.692511,-105.129&sspn=0.671015,1.454315&ie=UTF8&hq=&hnear=1569+S+Colorado+Blvd,+Denver,+Colorado+80222&z=16'>map</a>)
 				</address>
-				<p><a href="http://www.yelp.com/biz/petes-steak-house-denver">Help from Yelp!</a></p>
+				<p><a href="http://<%= @featured_product.customer.url %>"><%= @featured_product.customer.url %></a></p>
 			</div>
 			<ul class="list">
+				<li>* Redeemable for any Preferred Organic Therapy strain -> <a href='http://preferredorganictherapy.com/denver-colorado-highest-quality-strains-menu-top-shelf-ounce-weed-specials-kush-sour-diesel-skunk-colorado-cough-mango-kind-ediables-best-earwax-bubble-hash-honey-oil-keef-pre-roll-keef-cola.html'>see selection</a></li>
 				<li>* Limit 1 per customer</li>
-				<li>Valid only at the Denver Location</li>
-				<li>Promotional value expires December 12, 2011 (1 year from purchase)</li>
-				<li>Limit 1 per customer</li>
-				<li>Not Valid on Holidays and Special Events</li>
-				<li>Not Valid for Alcohol, Tax or Tip</li>
-				<li>Dine-in only</li>
+				<li>* Offer for coupon only -> Let's Be Buds does not sell medical marijuana</li>
 			</ul>
 		</div>
 		<!-- 
@@ -78,21 +76,21 @@
 			<ul class="list-other">
 				<li>
 					<div class="info">
-						<strong>60%</strong>
+						<strong>30%</strong>
 						<span>OFF</span>
 					</div>
 					<div class="text">
-						<h3><a href="/products/<%= @sub1_product.permalink %>">Chicago Hair</a></h3>
+						<h3><a href="/products/<%= @sub1_product.permalink %>">1/8th oz.</a></h3>
 						<p><%= truncate(@sub1_product.description, :length => 60) %></p>
 					</div>
 				</li>
 				<li>
 					<div class="info">
-						<strong>90%</strong>
+						<strong>30%</strong>
 						<span>OFF</span>
 					</div>
 					<div class="text">
-						<h3><a href="/products/<%= @sub2_product.permalink %>">Grand Salon</a></h3>
+						<h3><a href="/products/<%= @sub2_product.permalink %>">1/8th oz.</a></h3>
 						<p><%= truncate(@sub2_product.description, :length => 60) %></p>
 					</div>
 				</li>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101211230305) do
+ActiveRecord::Schema.define(:version => 20101217083635) do
 
   create_table "addresses", :force => true do |t|
     t.string    "firstname"
@@ -46,6 +46,12 @@ ActiveRecord::Schema.define(:version => 20101211230305) do
   end
 
   add_index "adjustments", ["order_id"], :name => "index_adjustments_on_order_id"
+
+  create_table "alert_emails", :force => true do |t|
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "assets", :force => true do |t|
     t.integer   "viewable_id"
@@ -303,8 +309,6 @@ ActiveRecord::Schema.define(:version => 20101211230305) do
     t.timestamp "created_at"
     t.timestamp "updated_at"
   end
-
-  add_index "preferences", ["owner_id", "owner_type", "name", "group_id", "group_type"], :name => "ix_prefs_on_owner_attr_pref", :unique => true
 
   create_table "product_groups", :force => true do |t|
     t.string "name"

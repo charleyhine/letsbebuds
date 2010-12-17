@@ -1,0 +1,23 @@
+<h1>Listing alert_emails</h1>
+
+<table>
+  <tr>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @alert_emails.each do |alert_email| %>
+  <tr>
+    <td><%= alert_email.email %></td>
+    <td><%= link_to 'Show', alert_email %></td>
+    <td><%= link_to 'Edit', edit_alert_email_path(alert_email) %></td>
+    <td><%= link_to 'Destroy', alert_email, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Alert email', new_alert_email_path %>

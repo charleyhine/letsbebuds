@@ -1,0 +1,23 @@
+
+<%= form_for(@alert_email, :html => { :class => "form-alert"}) do |f| %>
+
+	<fieldset>
+  <div class="text">
+    <%= f.text_field :email, :value => 'Receive deal alerts by e-mail...' %>
+  </div>
+
+    <input type="submit" class="btn" value="" /><%= notice %>
+
+</fieldset>
+<% end %>
+
+<!--
+<form action="#" class="form-alert">
+	<fieldset>
+		<div class="text">
+			<input type="text" title="Recieve deal alerts by e-mail..." value="Recieve deal alerts by e-mail..." />
+		</div>
+		<input type="submit" class="btn" value="" />
+	</fieldset>
+</form>
+-->

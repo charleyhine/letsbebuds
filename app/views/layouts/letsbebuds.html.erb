@@ -37,14 +37,7 @@
 			</div>	
 		</div>
 		<div id="header">
-			<form action="#" class="form-alert">
-				<fieldset>
-					<div class="text">
-						<input type="text" title="Recieve deal alerts by e-mail..." value="Recieve deal alerts by e-mail..." />
-					</div>
-					<input type="submit" class="btn" value="" />
-				</fieldset>
-			</form>
+			<%= render :partial => 'pages/email_alert'%>
 		</div>
 		<%= render :partial => 'shared/footer'%>
 	</div>

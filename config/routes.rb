@@ -1,4 +1,6 @@
 Letsbebuds::Application.routes.draw do
+  resources :alert_emails
+
   resources :deals
 
   # The priority is based upon order of creation:
